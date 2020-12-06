@@ -21,7 +21,6 @@ tplink: !include tplink_devices.yaml
 lutron_caseta_pro: !include lutron_caseta_pro.yaml
 sensor: !include sensors.yaml
 homekit: !include homekit.yaml
-#remote: !include global_cache.yaml
 media_player:
   - platform: kodi
     host: !secret shield_ip
