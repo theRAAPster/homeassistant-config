@@ -1,0 +1,385 @@
+tune_espn:
+  alias: Tune_ESPN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit3
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_espn2:
+  alias: Tune_ESPN2
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit4
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_secn:
+  alias: Tune_SECN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit5
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit1
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit7
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_cbs:
+  alias: Tune_CBS
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit1
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_fox:
+  alias: Tune_Fox
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit1
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit0
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_abc:
+  alias: Tune_ABC
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit0
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit8
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_nbc:
+  alias: Tune_NBC
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit0
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit6
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_btn:
+  alias: Tune_BTN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit0
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_espnu:
+  alias: Tune_ESPNU
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_tnt:
+  alias: Tune_TNT
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit5
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_nfln:
+  alias: Tune_NFLN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit6
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_espnnews:
+  alias: Tune_ESPNNews
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit2
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit7
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_fsn:
+  alias: Tune_FSN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit3
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit0
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_tbs:
+  alias: Tune_TBS
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit3
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_cbssn:
+  alias: Tune_CBSSN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit6
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit8
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_fs1:
+  alias: Tune_FS1
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit6
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_nbcsn:
+  alias: Tune_NBCSN
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit7
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit1
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_trutv:
+  alias: Tune_TruTV
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit9
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit5
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+tune_tvg:
+  alias: Tune_TVG
+  sequence:
+  - service: rest_command.{{ xbox }}_xbox_digit5
+  - delay:
+      seconds: 1
+  - service: rest_command.{{ xbox }}_xbox_digit6
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_digit3
+  - delay:
+      seconds: 0.5
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  - service: rest_command.{{ xbox }}_xbox_cursor_enter
+  mode: single
+  fields:
+    xbox:
+      description: The xbox to control
+      example: top
+alexa_turn_on_the_lights:
+  alias: Alexa Turn On The Lights
+  sequence:
+  - service: homeassistant.turn_on
+    data_template:
+      entity_id: "{# Use the name of each Echo to determine which room the command\
+        \ likely came from. #} {%- set room = states(\"sensor.last_alexa\")|replace('media_player.','')\
+        \ -%}\n{%- if room == \"kitchen\" -%}\n  light.kitchen_main_lights\n{%- elif\
+        \ room == \"office\" -%}\n  group.office_lights\n{%- elif room == \"basement\"\
+        \ or room == \"basement_dot\" -%}\n  group.all_basement_lights\n{%- elif room\
+        \ == \"parlor\" -%}\n  group.parlor_lights\n{%- endif -%}"
+  mode: single
+alexa_turn_off_the_lights:
+  alias: Alexa Turn Off The Lights
+  sequence:
+  - service: homeassistant.turn_off
+    data_template:
+      entity_id: "{# Use the name of each Echo to determine which room the command\
+        \ likely came from. #} {%- set room = states(\"sensor.last_alexa\")|replace('media_player.','')\
+        \ -%}\n{%- if room == \"kitchen\" -%}\n  light.kitchen_main_lights\n{%- elif\
+        \ room == \"office\" -%}\n  group.office_lights\n{%- elif room == \"basement\"\
+        \ or room == \"basement_dot\" -%}\n  group.all_basement_lights\n{%- elif room\
+        \ == \"parlor\" -%}\n  group.parlor_lights\n{%- endif -%}"
+  mode: single

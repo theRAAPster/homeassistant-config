@@ -1,0 +1,425 @@
+- id: poweroff_harmony_hub_after_sunset
+  alias: PowerOff harmony hub after sunset
+  trigger:
+  - platform: state
+    entity_id: remote.basement
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.attributes.current_activity == "PowerOff"
+      }}'
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: light.basement_sitting_area_main_lights
+      brightness_pct: 50
+  - service: light.turn_off
+    data: {}
+    entity_id: light.hyperion
+  - service: light.turn_off
+    data: {}
+    entity_id: light.wled
+  mode: single
+- id: pause_kodi_after_sunset
+  alias: Pause shield after sunset
+  trigger:
+  - entity_id: media_player.shield
+    for: 0:00:04
+    from: playing
+    platform: state
+    to: paused
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - data:
+      brightness: 30
+      transition: 2
+    entity_id: light.eagle_rare_lamp
+    service: light.turn_on
+  - service: light.turn_on
+    data:
+      effect: Solid
+    entity_id: light.hyperion
+  mode: single
+- id: resume_kodi_after_sunset
+  alias: Resume shield after sunset
+  trigger:
+  - entity_id: media_player.shield
+    for: 00:00:01
+    from: paused
+    platform: state
+    to: playing
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - data: {}
+    entity_id: light.basement_sitting_area_main_lights
+    service: light.turn_off
+  - data: {}
+    entity_id: light.eagle_rare_lamp
+    service: light.turn_off
+  - service: light.turn_on
+    data:
+      effect: V4L
+    entity_id: light.hyperion
+  mode: single
+- id: '1589422829990'
+  alias: Turn on office plate
+  description: ''
+  trigger:
+  - event: sunset
+    platform: sun
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.my_smart_plug
+    service: switch.turn_on
+- id: '1589423252586'
+  alias: Turn off lights at bedtime
+  description: ''
+  trigger:
+  - at: '23:45'
+    platform: time
+  condition: []
+  action:
+  - data: {}
+    entity_id: switch.my_smart_plug
+    service: switch.turn_off
+  - service: light.turn_off
+    data: {}
+    entity_id: light.wled_desk
+  - service: light.turn_off
+    data: {}
+    entity_id: light.server_rack_lights
+  mode: single
+- id: '1589510811227'
+  alias: Turn on the lights when I arrive home after dark
+  description: ''
+  trigger:
+  - entity_id: person.jason
+    event: enter
+    platform: zone
+    zone: zone.home
+  condition:
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - data: {}
+    entity_id: light.front_porch_sconces
+    service: light.turn_on
+  - data:
+      brightness_pct: 40
+    entity_id: light.laundry_room_main_lights
+    service: light.turn_on
+  - data:
+      brightness_pct: 40
+    entity_id: light.stairs_main_lights
+    service: light.turn_on
+  - service: scene.turn_on
+    data:
+      transition: 10
+    entity_id: scene.evening
+  - service: timer.start
+    data: {}
+    entity_id: timer.arrive_home_timer
+  mode: single
+- id: '1603669343449'
+  alias: PowerOn harmony hub after sunset
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: remote.basement
+  condition:
+  - condition: template
+    value_template: '{{ trigger.to_state.attributes.current_activity == "Watch Shield"
+      }}'
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
+  action:
+  - service: light.turn_off
+    data:
+      entity_id: light.basement_sitting_area_main_lights
+  - service: light.turn_on
+    data:
+      effect: V4L
+    entity_id: light.hyperion
+  - service: light.turn_on
+    data: {}
+    entity_id: light.wled
+  mode: single
+- id: '1606255729497'
+  alias: Evening scene
+  description: Turn lights on in the evening when I am home
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:30:00
+  condition:
+  - condition: state
+    state: home
+    entity_id: person.jason
+  action:
+  - service: scene.turn_on
+    data:
+      transition: 10
+    entity_id: scene.evening
+  mode: single
+- id: '1606274389033'
+  alias: Kitchen Pico On
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '1'
+  condition: []
+  action:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606274450715'
+  alias: Kitchen Pico Off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '4'
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606274516120'
+  alias: Kitchen Pico Fav
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '2'
+  condition: []
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: 30
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606275258494'
+  alias: Kitchen Pico Up
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '8'
+  condition: []
+  action:
+  - service: light.turn_on
+    data:
+      brightness: '{{ [255, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
+        + 51]|min }}'
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606275286587'
+  alias: Kitchen Pico Down
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '16'
+  condition: []
+  action:
+  - service: light.turn_on
+    data:
+      brightness: '{{ [0, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
+        - 51]|max }}'
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606275784029'
+  alias: Kitchen Pico Fav Hold
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.kitchen_pico
+    to: '2'
+    for: '2'
+  condition: []
+  action:
+  - service: light.turn_on
+    data:
+      brightness_pct: 70
+    entity_id: light.kitchen_main_lights
+  mode: single
+- id: '1606433072671'
+  alias: Turn off outside lights after I have arrived home
+  description: ''
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.arrive_home_timer
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.front_porch_sconces
+  - service: light.turn_off
+    data: {}
+    entity_id: light.laundry_room_main_lights
+  - service: light.turn_off
+    data: {}
+    entity_id: light.stairs_main_lights
+  mode: single
+- id: '1606528510581'
+  alias: Server Rack - Door Open
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.server_rack_door_sensor
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - service: scene.create
+    data:
+      scene_id: server_rack_closed
+      snapshot_entities:
+      - light.server_rack_lights
+  - service: light.turn_on
+    data:
+      brightness: 1
+      white_value: 204
+    entity_id: light.server_rack_lights
+  mode: single
+- id: '1606528903721'
+  alias: Server Rack - Door Closed
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.server_rack_door_sensor
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: scene.turn_on
+    data: {}
+    entity_id: scene.server_rack_closed
+  mode: single
+- id: '1606531315668'
+  alias: Garage Entry Door - Left Open
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: e5ff2a80a72719f29d1f84cb0963e30d
+    entity_id: binary_sensor.garage_entry_door_sensor
+    domain: binary_sensor
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+  condition: []
+  action:
+  - service: notify.mobile_app_jasons_12
+    data:
+      title: Do better
+      message: You left the garage entry door open
+  - service: notify.alexa_media
+    data:
+      data:
+        type: announce
+        method: all
+      target:
+      - media_player.kitchen
+      - media_player.basement
+      - media_player.office
+      - media_player.bathroom
+      - media_player.garage
+      message: The garage entry door has been left open
+  mode: single
+- id: '1606579834188'
+  alias: Garage lights on
+  description: ''
+  trigger:
+  - type: opened
+    platform: device
+    device_id: e5ff2a80a72719f29d1f84cb0963e30d
+    entity_id: binary_sensor.garage_entry_door_sensor
+    domain: binary_sensor
+  - type: motion
+    platform: device
+    device_id: 8291b3ca43e5d7d99f0de29c2b894287
+    entity_id: binary_sensor.presence_2
+    domain: binary_sensor
+  condition:
+  - type: is_illuminance
+    condition: device
+    device_id: 8291b3ca43e5d7d99f0de29c2b894287
+    entity_id: sensor.lightlevel_3
+    domain: sensor
+    below: 20
+  action:
+  - service: light.turn_on
+    data: {}
+    entity_id: light.garage_main_lights
+  - service: timer.start
+    data: {}
+    entity_id: timer.garage_light_timer
+  mode: single
+- id: '1606581696830'
+  alias: Garage lights off
+  description: ''
+  trigger:
+  - platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.garage_light_timer
+  condition: []
+  action:
+  - service: light.turn_off
+    data: {}
+    entity_id: light.garage_main_lights
+  mode: single
+- id: '1606861381577'
+  alias: Night Night
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: sensor.iphone_battery_state
+    to: Charging
+    from: Not Charging
+  condition:
+  - condition: time
+    after: '11:00:00'
+    before: 04:00:00
+  action:
+  - service: scene.turn_on
+    data:
+      transition: 5
+    entity_id: scene.all_off
+  mode: single
+- id: '1607132023973'
+  alias: Notify when Amazon Login Required
+  description: ''
+  trigger:
+  - platform: event
+    event_type: alexa_media_relogin_required
+  condition: []
+  action:
+  - service: notify.mobile_app_jasons_12
+    data:
+      title: Alexa Media Player Integration
+      message: 🔑 Authentication Required
+      data:
+        actions:
+        - action: URI
+          title: Resolve now!
+          uri: /lovelace-test
+  mode: single

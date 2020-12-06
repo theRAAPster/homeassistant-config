@@ -1,0 +1,4 @@
+bridges:
+  - host: !secret caseta_bridge_ip
+    mac: !secret caseta_bridge_mac
+    default_transition_seconds: 1.0

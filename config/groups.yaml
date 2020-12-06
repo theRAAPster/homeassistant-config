@@ -1,0 +1,28 @@
+echos:
+  name: Echos
+  entities:
+    - media_player.basement
+    - media_player.basement_dot
+    - media_player.bathroom
+    - media_player.bedroom
+    - media_player.garage
+    - media_player.kitchen
+    - media_player.office
+    - media_player.parlor
+office_lights:
+  name: Office Lights
+  entities:
+    - light.wled_desk
+    - switch.my_smart_plug
+parlor_lights:
+  name: Parlor Lights
+  entities:
+    - switch.on_off_switch_switch
+    - switch.on_off_switch_switch_2
+all_basement_lights:
+  name: All Basement Lights
+  entities:
+    - light.basement_sitting_area_main_lights
+    - light.basement_sitting_area_floor_lamp
+    - light.eagle_rare_lamp
+    - light.wled

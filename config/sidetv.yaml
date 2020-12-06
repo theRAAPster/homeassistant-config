@@ -1,0 +1,120 @@
+top_tv_power:
+  url: http://192.168.1.245:81/api/element/top/power
+  method: POST
+top_xbox_on:
+  url: http://192.168.1.245:81/api/xboxone/top/power
+  method: POST
+top_xbox_off:
+  url: http://192.168.1.245:81/api/xboxone/top/poweroff
+  method: POST
+top_xbox_cursor_up:
+  url: http://192.168.1.245:81/api/xboxone/top/cursorup
+  method: POST
+top_xbox_cursor_down:
+  url: http://192.168.1.245:81/api/xboxone/top/cursordown
+  method: POST
+top_xbox_cursor_right:
+  url: http://192.168.1.245:81/api/xboxone/top/cursorright
+  method: POST
+top_xbox_cursor_left:
+  url: http://192.168.1.245:81/api/xboxone/top/cursorleft
+  method: POST
+top_xbox_cursor_enter:
+  url: http://192.168.1.245:81/api/xboxone/top/cursorenter
+  method: POST
+top_xbox_back:
+  url: http://192.168.1.245:81/api/xboxone/top/back
+  method: POST
+top_xbox_exit:
+  url: http://192.168.1.245:81/api/xboxone/top/exit
+  method: POST
+top_xbox_digit0:
+  url: http://192.168.1.245:81/api/xboxone/top/digit0
+  method: POST
+top_xbox_digit1:
+  url: http://192.168.1.245:81/api/xboxone/top/digit1
+  method: POST
+top_xbox_digit2:
+  url: http://192.168.1.245:81/api/xboxone/top/digit2
+  method: POST
+top_xbox_digit3:
+  url: http://192.168.1.245:81/api/xboxone/top/digit3
+  method: POST
+top_xbox_digit4:
+  url: http://192.168.1.245:81/api/xboxone/top/digit4
+  method: POST
+top_xbox_digit5:
+  url: http://192.168.1.245:81/api/xboxone/top/digit5
+  method: POST
+top_xbox_digit6:
+  url: http://192.168.1.245:81/api/xboxone/top/digit6
+  method: POST
+top_xbox_digit7:
+  url: http://192.168.1.245:81/api/xboxone/top/digit7
+  method: POST
+top_xbox_digit8:
+  url: http://192.168.1.245:81/api/xboxone/top/digit8
+  method: POST
+top_xbox_digit9:
+  url: http://192.168.1.245:81/api/xboxone/top/digit9
+  method: POST
+bottom_tv_power:
+  url: http://192.168.1.245:81/api/element/bottom/power
+  method: POST
+bottom_xbox_on:
+  url: http://192.168.1.245:81/api/xboxone/bottom/power
+  method: POST
+bottom_xbox_off:
+  url: http://192.168.1.245:81/api/xboxone/bottom/poweroff
+  method: POST
+bottom_xbox_cursor_up:
+  url: http://192.168.1.245:81/api/xboxone/bottom/cursorup
+  method: POST
+bottom_xbox_cursor_down:
+  url: http://192.168.1.245:81/api/xboxone/bottom/cursordown
+  method: POST
+bottom_xbox_cursor_right:
+  url: http://192.168.1.245:81/api/xboxone/bottom/cursorright
+  method: POST
+bottom_xbox_cursor_left:
+  url: http://192.168.1.245:81/api/xboxone/bottom/cursorleft
+  method: POST
+bottom_xbox_cursor_enter:
+  url: http://192.168.1.245:81/api/xboxone/bottom/cursorenter
+  method: POST
+bottom_xbox_back:
+  url: http://192.168.1.245:81/api/xboxone/bottom/back
+  method: POST
+bottom_xbox_exit:
+  url: http://192.168.1.245:81/api/xboxone/bottom/exit
+  method: POST
+bottom_xbox_digit0:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit0
+  method: POST
+bottom_xbox_digit1:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit1
+  method: POST
+bottom_xbox_digit2:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit2
+  method: POST
+bottom_xbox_digit3:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit3
+  method: POST
+bottom_xbox_digit4:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit4
+  method: POST
+bottom_xbox_digit5:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit5
+  method: POST
+bottom_xbox_digit6:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit6
+  method: POST
+bottom_xbox_digit7:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit7
+  method: POST
+bottom_xbox_digit8:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit8
+  method: POST
+bottom_xbox_digit9:
+  url: http://192.168.1.245:81/api/xboxone/bottom/digit9
+  method: POST

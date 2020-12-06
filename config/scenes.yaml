@@ -1,0 +1,926 @@
+- id: '1606257753512'
+  name: Evening
+  entities:
+    light.kitchen_main_lights:
+      brightness: 74
+      integration_id: 11
+      area_name: Kitchen
+      friendly_name: Kitchen Main Lights
+      supported_features: 33
+      state: 'on'
+    switch.my_smart_plug:
+      friendly_name: Office Plate
+      state: 'on'
+    light.wled_desk:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Wipe
+      - Wipe Random
+      brightness: 128
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      effect: Solid
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-desk
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+    light.server_rack_lights:
+      effect_list:
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      brightness: 102
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      white_value: 0
+      effect: '0'
+      friendly_name: Server Rack Lights
+      supported_features: 189
+      state: 'on'
+    light.wled:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Wipe
+      - Wipe Random
+      brightness: 76
+      hs_color:
+      - 240
+      - 100
+      rgb_color:
+      - 0
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      effect: Solid
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-TV
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+  icon: mdi:weather-sunset-down
+- id: '1606259814223'
+  name: Cooking
+  entities:
+    light.kitchen_main_lights:
+      brightness: 255
+      integration_id: 11
+      area_name: Kitchen
+      friendly_name: Kitchen Main Lights
+      supported_features: 33
+      state: 'on'
+  icon: mdi:chef-hat
+- id: '1606260041154'
+  name: Cleaning
+  entities:
+    light.kitchen_main_lights:
+      brightness: 255
+      integration_id: 11
+      area_name: Kitchen
+      friendly_name: Kitchen Main Lights
+      supported_features: 33
+      state: 'on'
+    light.upstairs_hallway_main_lights:
+      brightness: 255
+      integration_id: 13
+      area_name: Upstairs Hallway
+      friendly_name: Upstairs Hallway Main Lights
+      supported_features: 33
+      state: 'on'
+    light.stairs_main_lights:
+      brightness: 255
+      integration_id: 8
+      area_name: Stairs
+      friendly_name: Stairs Main Lights
+      supported_features: 33
+      state: 'on'
+    switch.on_off_switch_switch:
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Parlor Couch Light Switch
+      state: 'on'
+    switch.on_off_switch_switch_2:
+      node_id: 5
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594126614528'
+      friendly_name: Parlor Love Seat Light Switch
+      state: 'on'
+    light.basement_sitting_area_main_lights:
+      brightness: 255
+      integration_id: 3
+      area_name: Basement Sitting Area
+      friendly_name: Basement Sitting Area Main Lights
+      supported_features: 33
+      state: 'on'
+    light.basement_sitting_area_floor_lamp:
+      brightness: 255
+      integration_id: 6
+      area_name: Basement Sitting Area
+      friendly_name: Basement Sitting Area Floor Lamp
+      supported_features: 33
+      state: 'on'
+    light.eagle_rare_lamp:
+      brightness: 254
+      is_deconz_group: false
+      friendly_name: Eagle Rare Lamp
+      supported_features: 41
+      state: 'on'
+    light.laundry_room_main_lights:
+      brightness: 255
+      integration_id: 2
+      area_name: Laundry Room
+      friendly_name: Laundry Room Main Lights
+      supported_features: 33
+      state: 'on'
+    light.wled:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Wipe
+      - Wipe Random
+      brightness: 255
+      hs_color:
+      - 0
+      - 0
+      rgb_color:
+      - 255
+      - 255
+      - 255
+      xy_color:
+      - 0.323
+      - 0.329
+      effect: Solid
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-TV
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'on'
+  icon: mdi:spray-bottle
+- id: '1606260682433'
+  name: All Off
+  entities:
+    light.kitchen_main_lights:
+      integration_id: 11
+      area_name: Kitchen
+      friendly_name: Kitchen Main Lights
+      supported_features: 33
+      state: 'off'
+    light.upstairs_hallway_main_lights:
+      integration_id: 13
+      area_name: Upstairs Hallway
+      friendly_name: Upstairs Hallway Main Lights
+      supported_features: 33
+      state: 'off'
+    switch.on_off_switch_switch:
+      node_id: 4
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594109837312'
+      friendly_name: Parlor Couch Light Switch
+      state: 'off'
+    zwave.on_off_switch_2:
+      node_id: 5
+      node_name: On/Off Switch
+      manufacturer_name: Jasco Products
+      product_name: 45603 Plugin Appliance Module
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: false
+      capabilities:
+      - routing
+      - beaming
+      - listening
+      neighbors:
+      - 1
+      - 3
+      - 4
+      sentCnt: 15
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 9
+      receivedDups: 0
+      receivedUnsolicited: 0
+      sentTS: '2020-12-01 17:46:43:508 '
+      receivedTS: '2020-12-01 17:46:43:542 '
+      lastRequestRTT: 23
+      averageRequestRTT: 30
+      lastResponseRTT: 33
+      averageResponseRTT: 34
+      application_version: '3.18'
+      friendly_name: Parlor Love Seat Light
+      state: ready
+    switch.on_off_switch_switch_2:
+      node_id: 5
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594126614528'
+      friendly_name: Parlor Love Seat Light Switch
+      state: 'off'
+    light.stairs_main_lights:
+      integration_id: 8
+      area_name: Stairs
+      friendly_name: Stairs Main Lights
+      supported_features: 33
+      state: 'off'
+    light.basement_sitting_area_main_lights:
+      integration_id: 3
+      area_name: Basement Sitting Area
+      friendly_name: Basement Sitting Area Main Lights
+      supported_features: 33
+      state: 'off'
+    light.basement_sitting_area_floor_lamp:
+      integration_id: 6
+      area_name: Basement Sitting Area
+      friendly_name: Basement Sitting Area Floor Lamp
+      supported_features: 33
+      state: 'off'
+    light.eagle_rare_lamp:
+      is_deconz_group: false
+      friendly_name: Eagle Rare Lamp
+      supported_features: 41
+      state: 'off'
+    light.laundry_room_main_lights:
+      integration_id: 2
+      area_name: Laundry Room
+      friendly_name: Laundry Room Main Lights
+      supported_features: 33
+      state: 'off'
+    light.wled:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Wipe
+      - Wipe Random
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-TV
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'off'
+    light.wled_desk:
+      min_mireds: 153
+      max_mireds: 500
+      effect_list:
+      - Android
+      - Blink
+      - Blink Rainbow
+      - Bouncing Balls
+      - Bpm
+      - Breathe
+      - Candle
+      - Candle Multi
+      - Chase
+      - Chase Flash
+      - Chase Flash Rnd
+      - Chase Rainbow
+      - Chase Random
+      - Chunchun
+      - Circus
+      - Colorful
+      - Colorloop
+      - Colortwinkles
+      - Colorwaves
+      - Dancing Shadows
+      - Dissolve
+      - Dissolve Rnd
+      - Drip
+      - Dynamic
+      - Fade
+      - Fill Noise
+      - Fire 2012
+      - Fire Flicker
+      - Fireworks
+      - Fireworks 1D
+      - Fireworks Starburst
+      - Flow
+      - Glitter
+      - Gradient
+      - Halloween
+      - Halloween Eyes
+      - Heartbeat
+      - ICU
+      - Juggle
+      - Lake
+      - Lighthouse
+      - Lightning
+      - Loading
+      - Merry Christmas
+      - Meteor
+      - Meteor Smooth
+      - Multi Comet
+      - Noise 1
+      - Noise 2
+      - Noise 3
+      - Noise 4
+      - Noise Pal
+      - Oscillate
+      - Pacifica
+      - Palette
+      - Percent
+      - Phased
+      - Phased Noise
+      - Plasma
+      - Police
+      - Police All
+      - Popcorn
+      - Pride 2015
+      - Railway
+      - Rain
+      - Rainbow
+      - Rainbow Runner
+      - Random Colors
+      - Red & Blue
+      - Ripple
+      - Ripple Rainbow
+      - Running
+      - Running 2
+      - Saw
+      - Scan
+      - Scan Dual
+      - Scanner
+      - Scanner Dual
+      - Sine
+      - Sinelon
+      - Sinelon Dual
+      - Sinelon Rainbow
+      - Solid
+      - Solid Glitter
+      - Solid Pattern
+      - Solid Pattern Tri
+      - Sparkle
+      - Sparkle Dark
+      - Sparkle+
+      - Spots
+      - Spots Fade
+      - Stream
+      - Stream 2
+      - Strobe
+      - Strobe Mega
+      - Strobe Rainbow
+      - Sunrise
+      - Sweep
+      - Sweep Random
+      - Theater
+      - Theater Rainbow
+      - Traffic Light
+      - Tri Chase
+      - Tri Fade
+      - Tri Wipe
+      - Twinkle
+      - Twinklecat
+      - Twinklefox
+      - Twinkleup
+      - Two Areas
+      - Two Dots
+      - Wipe
+      - Wipe Random
+      intensity: 128
+      palette: Default
+      playlist:
+      preset:
+      reverse: false
+      speed: 128
+      friendly_name: WLED-desk
+      icon: mdi:led-strip-variant
+      supported_features: 55
+      state: 'off'
+    switch.wled_desk_nightlight:
+      duration: 60
+      fade: true
+      target_brightness: 0
+      friendly_name: WLED-desk Nightlight
+      icon: mdi:weather-night
+      state: 'off'
+    switch.wled_desk_sync_send:
+      udp_port: 21324
+      friendly_name: WLED-desk Sync Send
+      icon: mdi:upload-network-outline
+      state: 'off'
+    switch.wled_desk_sync_receive:
+      udp_port: 21324
+      friendly_name: WLED-desk Sync Receive
+      icon: mdi:download-network-outline
+      state: 'on'
+    light.server_rack_lights:
+      effect_list:
+      - '0'
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+      - '5'
+      - '6'
+      friendly_name: Server Rack Lights
+      supported_features: 189
+      state: 'off'
+    switch.my_smart_plug:
+      friendly_name: Office Plate
+      state: 'off'
+    light.front_porch_sconces:
+      integration_id: 15
+      area_name: Front Porch
+      friendly_name: Front Porch Sconces
+      supported_features: 33
+      state: 'off'
+    switch.jasco_products_12722_on_off_relay_switch_switch:
+      node_id: 3
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594093060096'
+      friendly_name: Back Deck Light
+      state: 'off'
+  icon: mdi:flash-off

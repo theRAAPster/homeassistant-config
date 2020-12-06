@@ -1,0 +1,9 @@
+autostart: true
+filter:
+  include_domains:
+    - light
+  include_entities:
+    - switch.on_off_switch_switch
+    - switch.on_off_switch_switch_2
+    - switch.my_smart_plug
+    - switch.jasco_products_12722_on_off_relay_switch_switch

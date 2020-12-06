@@ -1,0 +1,12 @@
+deconz:
+  title: 'deConZ'
+  url: 'http://192.168.1.245:8001'
+  icon: mdi:memory
+tautulli:
+  title: 'Tautulli'
+  url: 'http://192.168.1.245:8181/home'
+  icon: mdi:television-guide
+transmission:
+  title: 'Transmission'
+  url: 'http://192.168.1.245:9091/transmission/web/'
+  icon: mdi:cloud-download
