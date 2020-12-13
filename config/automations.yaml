@@ -35,15 +35,19 @@
     entity_id: sun.sun
     state: below_horizon
   action:
+  - service: scene.create
+    data:
+      scene_id: kodi_paused_after_dark
+      snapshot_entities:
+      - light.eagle_rare_lamp
+      - light.basement_sitting_area_floor_lamp
+      - light.basement_sitting_area_main_lights
+      - light.laundry_room_main_lights
   - data:
       brightness: 30
       transition: 2
-    entity_id: light.eagle_rare_lamp
+    entity_id: light.eagle_rare_lamp, light.laundry_room_main_lights
     service: light.turn_on
-  - service: light.turn_on
-    data:
-      effect: Solid
-    entity_id: light.hyperion
   mode: single
 - id: resume_kodi_after_sunset
   alias: Resume shield after sunset
@@ -58,16 +62,8 @@
     entity_id: sun.sun
     state: below_horizon
   action:
-  - data: {}
-    entity_id: light.basement_sitting_area_main_lights
-    service: light.turn_off
-  - data: {}
-    entity_id: light.eagle_rare_lamp
-    service: light.turn_off
-  - service: light.turn_on
-    data:
-      effect: V4L
-    entity_id: light.hyperion
+  - service: scene.turn_on
+    entity_id: scene.kodi_paused_after_dark
   mode: single
 - id: '1589422829990'
   alias: Turn on office plate
@@ -161,7 +157,7 @@
   trigger:
   - platform: sun
     event: sunset
-    offset: -00:30:00
+    offset: -00:20:00
   condition:
   - condition: state
     state: home
