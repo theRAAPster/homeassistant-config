@@ -80,7 +80,7 @@
   alias: Turn off lights at bedtime
   description: ''
   trigger:
-  - at: '23:45'
+  - at: '23:45:00'
     platform: time
   condition: []
   action:
