@@ -219,8 +219,7 @@
   action:
   - service: light.turn_on
     data:
-      brightness: '{{ [255, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
-        + 51]|min }}'
+      brightness_step_pct: 20
     entity_id: light.kitchen_main_lights
   mode: single
 - id: '1606275286587'
@@ -234,8 +233,7 @@
   action:
   - service: light.turn_on
     data:
-      brightness: '{{ [0, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
-        - 51]|max }}'
+      brightness_step_pct: -20
     entity_id: light.kitchen_main_lights
   mode: single
 - id: '1606275784029'
