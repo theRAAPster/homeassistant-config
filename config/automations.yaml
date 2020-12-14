@@ -168,74 +168,59 @@
       transition: 10
     entity_id: scene.evening
   mode: single
-- id: '1606274389033'
-  alias: Kitchen Pico On
+- id: kitchen_pico_remote_automation
+  alias: Kitchen Pico Remote
   description: ''
   trigger:
   - platform: state
     entity_id: sensor.kitchen_pico
-    to: '1'
   condition: []
   action:
-  - service: light.turn_on
-    data: {}
-    entity_id: light.kitchen_main_lights
-  mode: single
-- id: '1606274450715'
-  alias: Kitchen Pico Off
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: sensor.kitchen_pico
-    to: '4'
-  condition: []
-  action:
-  - service: light.turn_off
-    data: {}
-    entity_id: light.kitchen_main_lights
-  mode: single
-- id: '1606274516120'
-  alias: Kitchen Pico Fav
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: sensor.kitchen_pico
-    to: '2'
-  condition: []
-  action:
-  - service: light.turn_on
-    data:
-      brightness_pct: 30
-    entity_id: light.kitchen_main_lights
-  mode: single
-- id: '1606275258494'
-  alias: Kitchen Pico Up
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: sensor.kitchen_pico
-    to: '8'
-  condition: []
-  action:
-  - service: light.turn_on
-    data:
-      brightness_step_pct: 20
-    entity_id: light.kitchen_main_lights
-  mode: single
-- id: '1606275286587'
-  alias: Kitchen Pico Down
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: sensor.kitchen_pico
-    to: '16'
-  condition: []
-  action:
-  - service: light.turn_on
-    data:
-      brightness_step_pct: -20
-    entity_id: light.kitchen_main_lights
-  mode: single
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: sensor.kitchen_pico
+        state: '1'
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.kitchen_main_lights
+    - conditions:
+      - condition: state
+        entity_id: sensor.kitchen_pico
+        state: '4'
+      sequence:
+      - service: light.turn_off
+        data:
+          entity_id: light.kitchen_main_lights
+    - conditions:
+      - condition: state
+        entity_id: sensor.kitchen_pico
+        state: '2'
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.kitchen_main_lights
+          brightness_pct: 30
+    - conditions:
+      - condition: state
+        entity_id: sensor.kitchen_pico
+        state: '8'
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.kitchen_main_lights
+          brightness_step_pct: 20
+    - conditions:
+      - condition: state
+        entity_id: sensor.kitchen_pico
+        state: '16'
+      sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.kitchen_main_lights
+          brightness_step_pct: -20
+    default: []
 - id: '1606275784029'
   alias: Kitchen Pico Fav Hold
   description: ''
