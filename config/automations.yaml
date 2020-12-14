@@ -219,8 +219,7 @@
   action:
   - service: light.turn_on
     data:
-      brightness: '{{ [255, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
-        + 51]|min }}'
+      brightness_step_pct: 20
     entity_id: light.kitchen_main_lights
   mode: single
 - id: '1606275286587'
@@ -234,8 +233,7 @@
   action:
   - service: light.turn_on
     data:
-      brightness: '{{ [0, state_attr(''light.kitchen_main_lights'', ''brightness'')|int(0)
-        - 51]|max }}'
+      brightness_step_pct: -20
     entity_id: light.kitchen_main_lights
   mode: single
 - id: '1606275784029'
@@ -274,39 +272,38 @@
     entity_id: light.stairs_main_lights
   mode: single
 - id: '1606528510581'
-  alias: Server Rack - Door Open
+  alias: Server Rack Lights
   description: ''
   trigger:
   - platform: state
     entity_id: binary_sensor.server_rack_door_sensor
-    from: 'off'
-    to: 'on'
   condition: []
   action:
-  - service: scene.create
-    data:
-      scene_id: server_rack_closed
-      snapshot_entities:
-      - light.server_rack_lights
-  - service: light.turn_on
-    data:
-      brightness: 1
-      white_value: 204
-    entity_id: light.server_rack_lights
-  mode: single
-- id: '1606528903721'
-  alias: Server Rack - Door Closed
-  description: ''
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.server_rack_door_sensor
-    from: 'on'
-    to: 'off'
-  condition: []
-  action:
-  - service: scene.turn_on
-    data: {}
-    entity_id: scene.server_rack_closed
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.server_rack_door_sensor
+        state: 'on'
+      sequence:
+      - service: scene.create
+        data:
+          scene_id: server_rack_closed
+          snapshot_entities:
+          - light.server_rack_lights
+      - service: light.turn_on
+        data:
+          brightness: 1
+          white_value: 204
+        entity_id: light.server_rack_lights
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.server_rack_door_sensor
+        state: 'off'
+      sequence:
+      - service: scene.turn_on
+        data: {}
+        entity_id: scene.server_rack_closed
+    default: []
   mode: single
 - id: '1606531315668'
   alias: Garage Entry Door - Left Open
