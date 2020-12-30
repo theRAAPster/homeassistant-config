@@ -334,15 +334,15 @@
   - type: motion
     platform: device
     device_id: 8291b3ca43e5d7d99f0de29c2b894287
-    entity_id: binary_sensor.presence_2
+    entity_id: binary_sensor.garage_presence
     domain: binary_sensor
   condition:
   - type: is_illuminance
     condition: device
     device_id: 8291b3ca43e5d7d99f0de29c2b894287
-    entity_id: sensor.lightlevel_3
+    entity_id: sensor.garage_lightlevel
     domain: sensor
-    below: 20
+    below: 30
   action:
   - service: light.turn_on
     data: {}
@@ -401,3 +401,32 @@
           title: Resolve now!
           uri: /lovelace-test
   mode: single
+- id: '1608955785341'
+  alias: Yet Another Motion Automation - Laundry Room
+  description: ''
+  use_blueprint:
+    path: networkingcat/yet_another_motion_automation.yaml
+    input:
+      no_motion_wait: '30'
+      motion_entity: binary_sensor.laundry_room_presence
+      elevation_check: 0
+      scene_no_motion: scene.laundry_room_motion_off
+      scene_evening: scene.laundry_room_motion
+      light_target:
+        entity_id: light.laundry_room_main_lights
+      scene_night: scene.laundry_room_motion
+- id: '1608956023695'
+  alias: Yet Another Motion Automation - Hallway
+  description: ''
+  use_blueprint:
+    path: networkingcat/yet_another_motion_automation.yaml
+    input:
+      motion_entity: binary_sensor.hallway_motion_sensor
+      light_target:
+        entity_id: light.upstairs_hallway_main_lights
+      elevation_check: 0
+      no_motion_wait: '30'
+      scene_no_motion: scene.hallway_motion_off
+      scene_evening: scene.hallway_motion_on
+      scene_night: scene.hallway_motion_on
+      time_scene_night: 0:00:00

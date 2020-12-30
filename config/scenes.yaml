@@ -924,3 +924,41 @@
       friendly_name: Back Deck Light
       state: 'off'
   icon: mdi:flash-off
+- id: '1608954046234'
+  name: Laundry Room Motion On
+  entities:
+    light.laundry_room_main_lights:
+      brightness: 102
+      integration_id: 2
+      area_name: Laundry Room
+      friendly_name: Laundry Room Main Lights
+      supported_features: 33
+      state: 'on'
+- id: '1608955414109'
+  name: Laundry Room Motion Off
+  entities:
+    light.laundry_room_main_lights:
+      integration_id: 2
+      area_name: Laundry Room
+      friendly_name: Laundry Room Main Lights
+      supported_features: 33
+      state: 'off'
+- id: '1608956074300'
+  name: Hallway Motion On
+  entities:
+    light.upstairs_hallway_main_lights:
+      brightness: 102
+      integration_id: 13
+      area_name: Upstairs Hallway
+      friendly_name: Upstairs Hallway Main Lights
+      supported_features: 33
+      state: 'on'
+- id: '1608956093157'
+  name: Hallway Motion Off
+  entities:
+    light.upstairs_hallway_main_lights:
+      integration_id: 13
+      area_name: Upstairs Hallway
+      friendly_name: Upstairs Hallway Main Lights
+      supported_features: 33
+      state: 'off'
